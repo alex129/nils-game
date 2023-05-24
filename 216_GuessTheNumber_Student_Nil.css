@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  overflow:  overlay ;
+  overflow-x:hidden;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  height: 100px;
+  background-color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.centered2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  padding-top: 0px;
+  margin-top:0px ;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin:30px;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 220px;
+  align-items: center;
+}
+
+.BUTTON1 {
+  background-image: url("link/3x/1.png");
+  object-fit: cover;
+}
+
+.BUTTON2 {
+  background-image: url("link/3x/2.png");
+  object-fit: cover;
+}
+
+.BUTTON3 {
+  background-image: url("link/3x/3.png");
+  object-fit: cover;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+.Image {
+  width: 30%;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 30px;
+  margin-top:30px ;
+}
+.AnimatedGif {
+  width: 65%;
+  align-items: center;
+  align-content: center;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .Image {
+    width: 40%;
+  }
+
+  .AnimatedGif {
+    width: 90%;
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas */
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .Image {
+    width: 60%;
+  }
+
+  .AnimatedGif {
+    width: 100%;
+  }
+}
