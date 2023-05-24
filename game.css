@@ -17,7 +17,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	overflow: hidden;
 }
 
 body {
@@ -176,15 +175,13 @@ button:hover {
   }
   .img-what {
 	position: absolute;
-	top: 0;
+	top: 350px !important;
 	left: 0;
-	width: 60%;
-	height: 60%;
-	padding-top: 165px; 	
+	height: auto !important;	
 	z-index: 2;
   }
 
-  .image3 {
+  .img-artist {
 	position: absolute;
 	top: 150px;
 	left: 0;

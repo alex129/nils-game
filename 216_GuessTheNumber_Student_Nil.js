@@ -7,7 +7,7 @@ $(document).ready(function() {
     
     $("#button-what").click(function() {
       var randomImage = imageOptions[Math.floor(Math.random() * imageOptions.length)];
-      $(".image2").attr("src", randomImage);
+      $(".img-artist").attr("src", randomImage);
       showRandomImages();
       $("#resetButton").show();
     });
@@ -26,7 +26,7 @@ $(document).ready(function() {
     
     function resetGame() {
       $(".image2").unbind("click");
-      $(".image2").attr("src", "link/3x/WHAT.png");
+      $(".img-artist").attr("src", "link/3x/WHAT.png");
       $(".image3").hide();
       $("#resetButton").hide();
     }
