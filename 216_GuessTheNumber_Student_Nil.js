@@ -5,7 +5,7 @@ $(document).ready(function() {
       // Agrega más opciones de imágenes aquí
     ];
     
-    $("#button-guess").click(function() {
+    $("#button-what").click(function() {
       var randomImage = imageOptions[Math.floor(Math.random() * imageOptions.length)];
       $(".image2").attr("src", randomImage);
       showRandomImages();
