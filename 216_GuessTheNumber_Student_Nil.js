@@ -1,34 +1,34 @@
-$(document).ready(function() {
-    var imageOptions = [
-      "link/3x/1.png",
-      "link/3x/2.png",
-      // Agrega más opciones de imágenes aquí
-    ];
-    
-    $("#button-what").click(function() {
-      var randomImage = imageOptions[Math.floor(Math.random() * imageOptions.length)];
-      $(".img-artist").attr("src", randomImage);
-      showRandomImages();
-      $("#resetButton").show();
-    });
-    
-    $("#resetButton").click(function() {
-      resetGame();
-    });
-    
-    function showRandomImages() {
-      $(".image3").each(function() {
-        var randomImage = imageOptions[Math.floor(Math.random() * imageOptions.length)];
-        $(this).attr("src", randomImage);
-        $(this).show();
-      });
-    }
-    
-    function resetGame() {
-      $(".image2").unbind("click");
-      $(".img-artist").attr("src", "link/3x/WHAT.png");
-      $(".image3").hide();
-      $("#resetButton").hide();
-    }
+$(document).ready(function () {
+  const folder = "link/3x/random/";
+  const totalImages = 9;
+  var imageOptions = [
+    "link/3x/1.png",
+    "link/3x/2.png",
+    // Agrega más opciones de imágenes aquí
+  ];
+
+  $("#button-what").click(function () {
+    showRandomImages();
   });
-  
+
+  $("#button-reset").click(function () {
+    resetGame();
+  });
+
+  function showRandomImages() {
+    const randomImageIndex = Math.floor(Math.random() * totalImages) + 1;
+    var imageArtistSource = folder + randomImageIndex + ".png";
+    var imageFolderSource = folder + randomImageIndex + "_title.png";
+    $(".img-artist").show();
+    $(".img-artist").attr("src", imageArtistSource);
+    $(".img-what").attr("src", imageFolderSource);
+    $("#button-reset").show();
+  }
+
+  function resetGame() {
+    console.log("Reset game");
+    $(".img-artist").hide();
+    $(".img-what").attr("src", "link/3x/WHAT.png");
+    $("#button-reset").hide();
+  }
+});
