@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const folder = "link/3x/random/";
   const totalImages = 9;
+  let played = false;
   var imageOptions = [
     "link/3x/1.png",
     "link/3x/2.png",
@@ -8,7 +9,9 @@ $(document).ready(function () {
   ];
 
   $("#button-what").click(function () {
-    showRandomImages();
+    if(!played) {
+      showRandomImages();
+    }
   });
 
   $("#button-reset").click(function () {
@@ -23,6 +26,7 @@ $(document).ready(function () {
     $(".img-artist").attr("src", imageArtistSource);
     $(".img-what").attr("src", imageFolderSource);
     $("#button-reset").show();
+    played = true;
   }
 
   function resetGame() {
@@ -30,5 +34,6 @@ $(document).ready(function () {
     $(".img-artist").hide();
     $(".img-what").attr("src", "link/3x/WHAT.png");
     $("#button-reset").hide();
+    played = false;
   }
 });
